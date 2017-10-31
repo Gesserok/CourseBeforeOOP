@@ -25,16 +25,26 @@ public class MatrixTurn {
         int angle = scanner.nextInt();
         int kol = angle / 90;
 
-        for (int k = 0; k < kol; k++) {
-            for (int i = 0; i < r / 2; i++) {
-                for (int j = 0; j < r - i - 1; j++) {
-                    int temp = matrix[i][j];
-                    temp = matrix[i][j];
-                    matrix[i][j] = matrix[r - j - 1][i];
-                    matrix[r - j - 1][i] = matrix[r - i - 1][r - j - 1];
-                    matrix[r - i - 1][r - j - 1] = matrix[j][r - i - 1];
-                    matrix[j][r - i - 1] = temp;
+        if (kol % 4 == 0) {
+            for (int i = 0; i < r; i++) {
+                for (int j = 0; j < r; j++) {
+                    System.out.print(matrix[i][j] + " ");
                 }
+                System.out.println();
+            }
+        }
+        if (kol % 4 == 1) {
+        //поворот на 90 грндусов по часовой стрелке
+            matrix = matrixTurn(matrix);
+        }
+        if (kol % 4 == 2) {
+            for (int i = 0; i < 2; i++) {
+                matrix = matrixTurn(matrix);
+            }
+        }
+        if (kol % 4 == 3) {
+            for (int i = 0; i < 3; i++) {
+                matrix = matrixTurn(matrix);
             }
         }
 
@@ -44,6 +54,21 @@ public class MatrixTurn {
             }
             System.out.println();
         }
+    }
+
+    public static int[][] matrixTurn(int[][] matrix) {
+        int r = matrix.length;
+        for (int i = 0; i < r / 2; i++) {
+            for (int j = 0; j < r - i - 1; j++) {
+                int temp = matrix[i][j];
+                temp = matrix[i][j];
+                matrix[i][j] = matrix[r - j - 1][i];
+                matrix[r - j - 1][i] = matrix[r - i - 1][r - j - 1];
+                matrix[r - i - 1][r - j - 1] = matrix[j][r - i - 1];
+                matrix[j][r - i - 1] = temp;
+            }
+        }
+        return matrix;
     }
 
 }
