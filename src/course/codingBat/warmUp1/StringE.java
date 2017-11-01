@@ -1,4 +1,4 @@
-package course.codingBat;
+package course.codingBat.warmUp1;
 
 
 /*
