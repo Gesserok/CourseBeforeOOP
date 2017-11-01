@@ -16,7 +16,7 @@ public class DelDel {
         System.out.println(delDel("aadelbb"));
     }
     public static String delDel(String str) {
-        if (str.contains("del") && !str.startsWith("del")) {
+        if (str.length() > 3 && str.substring(1,4).equals("del")) {
             String[] strSpit = str.split("del");
             String result = "";
             for (String x : strSpit) {
