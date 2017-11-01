@@ -17,6 +17,4 @@ public class Main {
         System.out.println(icyHot.icyHot(99, -1));
         System.out.println(icyHot.icyHot(120, 120));
     }
-
-
 }
