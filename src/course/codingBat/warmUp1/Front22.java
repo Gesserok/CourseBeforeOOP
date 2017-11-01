@@ -13,7 +13,7 @@ package course.codingBat.warmUp1;
 public class Front22 {
 
     public String front22(String str) {
-        if (str.length() < 2) return str;
+        if (str.length() < 2) return str.concat(str).concat(str);
         else return str.substring(0, 2).concat(str).concat(str.substring(0, 2));
     }
 

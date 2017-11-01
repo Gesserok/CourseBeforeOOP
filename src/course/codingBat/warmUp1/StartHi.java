@@ -1,4 +1,4 @@
-package codingBat.warmUp1;
+package course.codingBat.warmUp1;
 
 public class StartHi {
     public boolean startHi(String str) {

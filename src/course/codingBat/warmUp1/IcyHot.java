@@ -1,4 +1,4 @@
-package codingBat.warmUp1;
+package course.codingBat.warmUp1;
 
 public class IcyHot {
     public boolean icyHot(int temp1, int temp2) {

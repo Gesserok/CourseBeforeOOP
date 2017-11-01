@@ -1,9 +1,8 @@
-package codingBat;
+package course.codingBat;
 
 
-import codingBat.warmUp1.IcyHot;
-import codingBat.warmUp1.StartHi;
-import codingBat.warmUp1.WarmUp1;
+import course.codingBat.warmUp1.IcyHot;
+import course.codingBat.warmUp1.StartHi;
 
 public class Main {
     public static void main(String[] args) {
