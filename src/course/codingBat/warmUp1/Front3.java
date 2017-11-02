@@ -12,12 +12,22 @@ front3("abc") → "abcabcabc"
 
 public class Front3 {
     public static void main(String[] args) {
-        System.out.println(front3("asdadsdsa"));
+
+        System.out.println(front3("a"));
+        System.out.println(front3("ab"));
+        System.out.println(front3("abc"));
+
+
+
+
+
     }
     public static String front3(String str) {
         String front = "";
-        if (str.length() < 4)  {
-            front += str;
+        if (str.length() < 3)  {
+            for (int i = 0; i < 3; i++) {
+                front += str;
+            }
         } else {
             for (int i = 0; i < 3; i++) {
                 front += str.substring(0, 3);

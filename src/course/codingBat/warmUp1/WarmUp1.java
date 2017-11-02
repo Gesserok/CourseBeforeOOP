@@ -39,10 +39,6 @@ public class WarmUp1 {
             else return false;
     }
 
-    public boolean nearHundred(int n) {
-    return false;
-    }
-
     public boolean posNeg(int a, int b, boolean negative) {
         if (negative) {
             if (a < 0 && b < 0) return true;
