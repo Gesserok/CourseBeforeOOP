@@ -11,10 +11,19 @@ stringBits("Heeololeo") → "Hello"
 public class StringBits {
 
     public static void main(String[] args) {
-
+        System.out.println(stringBits("Hello"));
+        System.out.println(stringBits("Hi"));
+        System.out.println(stringBits("Heeololeo"));
+        System.out.println(stringBits(""));
     }
 
     public static String stringBits(String str) {
-        return "";
+        String result = "";
+        for (int i = 0; i < str.length(); i++) {
+            if ( i % 2 == 0 ) {
+                result += str.charAt(i);
+            }
+        }
+        return result;
     }
 }
