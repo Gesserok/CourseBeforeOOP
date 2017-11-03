@@ -1,9 +1,11 @@
 package course.homeworkBeforeOOP.week3.json_classwork;
 
+
 import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
+
         Student s1 = new Student();
         s1.setName("Anton");
         s1.setBirth(new Date());
@@ -34,8 +36,17 @@ public class Main {
 
         String str = GroupJsonUtils.jsonToListString("{ \"GroupName\" : \"FI21\", \"count\" : 10, \"list\" : [ { \"name\" : \"Anton\", \"birth\" : \"Mon Oct 30 10:35:55 EET 2017\", \"taskCount\" : 10, \"rank\" : 4}, { \"name\" : \"Vasia\", \"birth\" : \"Mon Oct 30 10:35:55 EET 2017\", \"taskCount\" : 6, \"rank\" : 1}] }");
 //        System.out.println(str);
-        System.out.println(GroupJsonUtils.jsonToStudent(str)[0]);
-        System.out.println(GroupJsonUtils.jsonToStudent(str)[1]);
+//        System.out.println(GroupJsonUtils.jsonToStudent(str)[0]);
+//        System.out.println(GroupJsonUtils.jsonToStudent(str)[1]);
+
+
+
+
+
+
+
+
+
 
     }
 }

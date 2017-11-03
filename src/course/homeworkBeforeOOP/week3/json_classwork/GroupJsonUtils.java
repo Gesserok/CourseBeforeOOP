@@ -36,7 +36,7 @@ public class GroupJsonUtils {
         if (!str.isEmpty() || str != null) {
             str = str.substring(str.indexOf('[')+1, str.indexOf(']'));
         } else str = "";
-        System.out.println("jsonToListString " + str);
+//        System.out.println("jsonToListString " + str);
         return str;
     }
 
@@ -44,6 +44,8 @@ public class GroupJsonUtils {
         String[] studentsString = str.split("},");
         return studentsString;
     }
+
+
 
 
 }
