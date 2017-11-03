@@ -1,4 +1,4 @@
-package course.homeworkBeforeOOP.week3.HomeWork311.matrix;
+package course.homeworkBeforeOOP.week3.homework311.matrix;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package course.homeworkBeforeOOP.week3.wordsdelete;
+package course.homeworkBeforeOOP.week3.homework310.worddelete;
 
 import java.util.Iterator;
 import java.util.LinkedHashMap;

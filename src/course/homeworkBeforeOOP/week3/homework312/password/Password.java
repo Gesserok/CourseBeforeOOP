@@ -1,4 +1,4 @@
-package course.homeworkBeforeOOP.week3.HomeWork312.password;
+package course.homeworkBeforeOOP.week3.homework312.password;
 
 //3.12*. Строки. Ввод пароля.
 //        Написать программу ввода пароля пользователя. Пользователь вводит пароль 2 раза. Пароль должен удовлетворять следующим требованиям:
