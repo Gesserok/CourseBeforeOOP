@@ -11,7 +11,7 @@ arrayCount9([1, 9, 9, 3, 9]) → 3
 public class ArrayCount9 {
     public int arrayCount9(int[] nums) {
         int count = 0;
-        for (Integer x : nums) {
+        for (int x : nums) {
             if (x == 9) {
                 count++;
             }
