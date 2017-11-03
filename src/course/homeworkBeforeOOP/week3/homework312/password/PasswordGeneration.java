@@ -1,4 +1,4 @@
-package course.homeworkBeforeOOP.week3.HomeWork312.password;
+package course.homeworkBeforeOOP.week3.homework312.password;
 
 import java.util.Scanner;
 
