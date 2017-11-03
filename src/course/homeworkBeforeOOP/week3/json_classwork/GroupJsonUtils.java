@@ -1,14 +1,13 @@
 package course.homeworkBeforeOOP.week3.json_classwork;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class GroupJsonUtils {
-    public static List<Integer> openBrace = new ArrayList<Integer>();
-    public static List<Integer> closeBrace = new ArrayList<Integer>();
-    public static List<Integer> openBraceArr = new ArrayList<Integer>();
-    public static List<Integer> closeBraceArr = new ArrayList<Integer>();
-
+    private static final Gson GSON = new GsonBuilder().setPrettyPrinting().create();
     public static String studentToJson(Student student) {
 
         return String.format(" { \"name\" : \"%s\", \"birth\" : \"%s\", \"taskCount\" : %d, \"rank\" : %d}",
@@ -31,19 +30,23 @@ public class GroupJsonUtils {
         return String.format(" { \"GroupName\" : \"%s\", \"count\" : %d, \"list\" : %s }", group.getName(), group.getCount(), GroupJsonUtils.listToJson(group.getList()));
     }
 
-
-    public static String jsonToListString(String str) {
-        if (!str.isEmpty() || str != null) {
-            str = str.substring(str.indexOf('[')+1, str.indexOf(']'));
-        } else str = "";
-//        System.out.println("jsonToListString " + str);
-        return str;
+/*
+    public static Group jsonToGroup(String str) {
+              return GSON.fromJson(str, Group.class);
     }
+    public static Student jsonToStudent (String str) {
+        if (str.contains("[")) {
+            str = str.substring(str.indexOf("["), str.indexOf("]"));
+        }
+        String[] studentString = str.split(",");
+        for (String x : studentString) {
 
-    public static String[] jsonToStudent (String str) {
-        String[] studentsString = str.split("},");
-        return studentsString;
+        }
+        return new Student();
+
     }
+*/
+
 
 
 

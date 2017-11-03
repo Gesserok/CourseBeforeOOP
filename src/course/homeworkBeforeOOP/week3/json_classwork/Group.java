@@ -8,8 +8,13 @@ public class Group {
     private int count;
     private List<Student> list;
 
-
     public Group(){
+        this.name = "FI21";
+        this.count = 10;
+        this.list = new ArrayList<Student>();
+    }
+
+    public Group(String name, int count, List list){
         this.name = "FI21";
         this.count = 10;
         this.list = new ArrayList<Student>();
