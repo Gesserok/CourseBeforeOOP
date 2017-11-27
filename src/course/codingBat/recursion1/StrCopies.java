@@ -17,19 +17,13 @@ public class StrCopies {
     }
     public static boolean strCopies(String str, String sub, int n) {
         if (n <= 0) return true;
-        if (str == null || str.isEmpty() || str.length() < sub.length()) return false;
+        if (str == null || str.isEmpty() || str.length() < sub.length())
+            return false;
 
-        if (str.length() >= sub.length() && str.substring(0,sub.length()).equals(sub)) {
-//            if (str.charAt(0) == str.charAt(1)) {
-//                return strCopies(str.charAt(1) + str.substring(sub.length()),sub,n-1);
-//            }
-
-            return strCopies(str.substring(1),sub,n-1);
+        if (str.length() >= sub.length() && str.substring(0, sub.length()).equals(sub)) {
+            return strCopies(str.substring(1), sub, n - 1);
         }
-        if (str.length() >= sub.length()) {
-            return strCopies(str.substring(1), sub, n);
-        }
-        return true;
+        return str.length() < sub.length() || strCopies(str.substring(1), sub, n);
     }
 }
 
