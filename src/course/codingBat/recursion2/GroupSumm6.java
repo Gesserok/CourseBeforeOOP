@@ -1,4 +1,4 @@
-package course.codingBat.array2.recursion2;
+package course.codingBat.recursion2;
 
 /*
 Given an array of ints, is it possible to choose a group of some of the ints,
@@ -12,13 +12,9 @@ However, with the additional constraint that all 6's must be chosen.
         groupSum6(0, [5, 6, 2], 7) → false*/
 
 
-import java.util.Arrays;
-
 public class GroupSumm6 {
     public static void main(String[] args) {
         System.out.println(groupSum6(0, new int[]{5, 6, 2}, 8));
-        System.out.println(groupSum6(0, new int[]{5, 6, 2}, 9));
-        System.out.println(groupSum6(0, new int[]{5, 6, 2}, 7));
     }
 
     public static boolean groupSum6(int start, int[] nums, int target) {
