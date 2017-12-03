@@ -1,6 +1,7 @@
 package course.java8.linkedStack;
 
 import java.util.EmptyStackException;
+import java.util.Iterator;
 
 public class LinkedStack<E> implements MyStack<E> {
 
@@ -32,7 +33,25 @@ public class LinkedStack<E> implements MyStack<E> {
         return this.size;
     }
 
-    public class MyLinkedIterator {
+    @Override
+    public Iterator<E> iterator() {
+        return new MyLinkedIterator<>();
+    }
+
+
+    public class MyLinkedIterator<E> implements Iterator<E>{
+        private Node<E> curr;
+
+        @Override
+        public E next() {
+            E forRet = curr.getValue();
+            curr = curr.getNext();
+            return forRet;
+        }
+        @Override
+        public boolean hasNext(){
+            return curr != null;
+        }
 
     }
 
